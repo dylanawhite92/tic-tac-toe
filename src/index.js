@@ -14,7 +14,7 @@ import "./index.css";
 
 const Square = props => {
   return (
-    <button className="square" onClick={() => props.onClick()}>
+    <button className="square" onClick={props.onClick}>
       {props.value}
     </button>
   );
