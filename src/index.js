@@ -17,7 +17,7 @@ class Board extends React.Component {
     const status = "Next Player: X";
 
     return (
-      <div>
+      <>
         <div className="status">{status}</div>
         <div className="board-row">
           {this.renderSquare(0)}
@@ -34,7 +34,28 @@ class Board extends React.Component {
           {this.renderSquare(7)}
           {this.renderSquare(8)}
         </div>
-      </div>
+      </>
     );
   }
 }
+
+class Game extends React.Component {
+  render() {
+    return (
+      <>
+        <div className="game">
+          <div className="game-board">
+            <Board />
+          </div>
+        </div>
+
+        <div className="game-info">
+          <div>{/* TODO */}</div>
+          <ol>{/* TODO */}</ol>
+        </div>
+      </>
+    );
+  }
+}
+
+ReactDOM.render(<Game />, document.getElementById("root"));
